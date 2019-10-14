@@ -1,4 +1,5 @@
 // 변수지정
+const navColor = document.querySelector("nav");
 
 const SHOWING_CLASS = "showing";
 const firstSlide = document.querySelector(".slider_item:first-child");
@@ -13,6 +14,11 @@ const mega1 = document.querySelector(".menu1");
 const mega2 = document.querySelector(".menu2");
 const mega3 = document.querySelector(".menu3");
 const mega4 = document.querySelector(".menu4");
+
+const slideNum = document.querySelector(".slide_number");
+const slideItems = document.getElementsByClassName("slider_item");
+
+let count = 1;
 //함수 선언
 
 const nextSlides = () => {
@@ -22,12 +28,17 @@ const nextSlides = () => {
     const nextSlide = currentSlide.nextElementSibling;
     if (nextSlide) {
       nextSlide.classList.add(SHOWING_CLASS);
+      count++;
     } else {
       firstSlide.classList.add(SHOWING_CLASS);
+      count = 1;
     }
   } else {
     firstSlide.classList.add(SHOWING_CLASS);
+    count = 1;
   }
+
+  slideNum.innerHTML = `${count}/${slideItems.length}`;
 };
 
 const prevSlides = () => {
@@ -37,18 +48,23 @@ const prevSlides = () => {
     const prevSlide = currentSlide.previousElementSibling;
     if (prevSlide) {
       prevSlide.classList.add(SHOWING_CLASS);
+      count--;
     } else {
       lastSlide.classList.add(SHOWING_CLASS);
+      count = 4;
     }
   } else {
     lastSlide.classList.add(SHOWING_CLASS);
+    count = 4;
   }
+  slideNum.innerHTML = `${count}/${slideItems.length}`;
 };
 
 nextSlides();
 
 nextBtn.addEventListener("click", nextSlides);
 prevBtn.addEventListener("click", prevSlides);
+setInterval(nextSlides, 5000);
 
 btn1.addEventListener("mouseover", () => {
   mega1.style.display = "flex";
@@ -81,3 +97,15 @@ btn4.addEventListener("mouseover", () => {
 btn4.addEventListener("mouseout", () => {
   mega4.style.display = "none";
 });
+
+const scrolls = () => {
+  if (document.documentElement.scrollTop > 30) {
+    navColor.style.background = "white";
+  } else {
+    navColor.style.background = "none";
+  }
+};
+
+window.onscroll = function() {
+  scrolls();
+};
