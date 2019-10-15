@@ -98,6 +98,14 @@ btn4.addEventListener("mouseout", () => {
   mega4.style.display = "none";
 });
 
+navColor.addEventListener("mouseover", () => {
+  navColor.style.background = "white";
+});
+
+navColor.addEventListener("mouseout", () => {
+  navColor.style.background = "none";
+});
+
 const scrolls = () => {
   if (document.documentElement.scrollTop > 30) {
     navColor.style.background = "white";

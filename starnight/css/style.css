@@ -1,0 +1,228 @@
+@import url("reset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 1600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.video_box {
+  width: 100%;
+  height: 900px;
+  position: relative;
+}
+
+.video_box > .video_txt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 200px 0 100px;
+}
+
+.title {
+  text-align: center;
+}
+
+.video_txt h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.video_txt p {
+  font-size: 17px;
+  line-height: 25px;
+  color: white;
+  text-align: center;
+}
+
+#myVideo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -9999;
+}
+
+#play {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  margin: 50px auto;
+}
+
+#play span {
+  display: block;
+  border-left: 20px solid #fff;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: none;
+  margin-left: 5px;
+}
+
+#started {
+  width: 280px;
+  height: 70px;
+  background: #7accc8;
+  color: white;
+  font-size: 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.section1 {
+  width: 100%;
+  height: 750px;
+  background: #e8b968;
+  padding: 100px 0 180px 200px;
+}
+
+.section1 h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  line-height: 53px;
+}
+
+.section1 p {
+  width: 50%;
+  height: auto;
+  color: white;
+  font-size: 14px;
+  line-height: 30px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.downloadBtn {
+  width: 280px;
+  height: 70px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  background: none;
+  border: 1px solid #fff;
+  outline: none;
+}
+
+.section2 {
+  width: 100%;
+  height: 1430px;
+}
+
+.section_1 {
+  width: 100%;
+  height: 600px;
+  background: url("http://cfile201.uf.daum.net/image/9939D9345C9E50E130B76E")
+    no-repeat;
+  background-size: cover;
+}
+
+.opacity_box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(91, 104, 105, 0.9),
+    rgba(91, 104, 105, 1)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 0;
+  position: relative;
+}
+
+.opacity_box:after {
+  display: block;
+  content: "";
+  position: absolute;
+  border-top: 28px solid rgba(91, 104, 105, 1);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  top: 99%;
+}
+
+.caric {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.caric img {
+  width: 120%;
+  height: 120%;
+}
+
+.opacity_box p {
+  font-size: 40px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+}
+
+.circle_box {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle_box > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.circle_box > span:nth-child(2) {
+  background: #fff;
+}
+
+.section_2 {
+  width: 100%;
+  height: 600px;
+  background: lightblue;
+}
+
+.section_3 {
+  width: 100%;
+  height: 230px;
+  background: dodgerblue;
+}
+
+.section3 {
+  width: 100%;
+  height: 750px;
+  background: lightblue;
+}
+
+footer {
+  width: 100%;
+  height: 700px;
+  background: dodgerblue;
+}
