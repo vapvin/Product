@@ -1,0 +1,175 @@
+@import url(reset.css);
+
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.row {
+  width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  width: 100%;
+  height: 18px;
+  margin-top: 20px;
+}
+
+.first_ul {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.first_li {
+  width: 25%;
+  height: 18px;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+}
+
+.first_li:first-child a {
+  border-left: 1px solid #bbb;
+}
+
+.first_li a {
+  display: inline-block;
+  border-right: 1px solid #bbb;
+  width: 100%;
+  height: 100%;
+}
+
+.second_ul {
+  text-align: left;
+  height: 0;
+  width: 100%;
+  padding: 0px 35px;
+  border-right: 1px solid #ddd;
+  margin-top: 10px;
+  opacity: 0;
+  display: block;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.first_ul:hover .second_ul {
+  opacity: 1;
+  height: 300px;
+  padding-top: 20px;
+}
+
+.first_li:first-child .second_ul {
+  border-left: 1px solid #ddd;
+}
+
+.second_ul li {
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.second_ul li:before {
+  content: "\2022";
+  color: #ddd;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+.back {
+  width: 100%;
+  height: 0;
+  background: #eee;
+  transition: 0.5s;
+}
+
+.header_btn1 {
+  all: unset;
+  background: #fff;
+  width: 100px;
+  height: 30px;
+  padding: 0 40px;
+  padding-right: 0;
+  display: inline-block;
+  border: 1px solid #bbb;
+  font-size: 12px;
+  border-radius: 15px;
+  overflow: hidden;
+  float: left;
+  transition: 0.5s;
+}
+.header_btn1:hover {
+  width: 260px;
+}
+
+.header_btn {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  padding: 0 40px;
+  padding-right: 0;
+  display: inline-block;
+  border: 1px solid #bbb;
+  background: #fff;
+  border-radius: 15px;
+  font-size: 12px;
+  float: left;
+  margin-left: 10px;
+}
+
+.header_btn1 span {
+  display: inline-block;
+  height: 100%;
+  float: left;
+  padding: 7px 0;
+}
+
+.lang {
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  margin-left: 30px;
+  padding: 7px 0;
+}
+
+.header_btn1:hover .lang {
+  opacity: 1;
+  width: auto;
+}
+
+.lang a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.lang a:first-child {
+  color: #002d74;
+  font-weight: 600;
+}
