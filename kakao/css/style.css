@@ -41,6 +41,7 @@ nav:hover {
   left: 0;
   top: 0;
   z-index: -9999;
+  display: none;
 }
 
 .relations {
@@ -176,7 +177,7 @@ nav p button:focus {
 }
 
 .megamenu {
-  display: none;
+  display: flex;
   padding: 0 50px;
   justify-content: center;
   position: absolute;

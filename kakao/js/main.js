@@ -10,10 +10,7 @@ const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
 const btn4 = document.querySelector("#btn4");
-const mega1 = document.querySelector(".menu1");
-const mega2 = document.querySelector(".menu2");
-const mega3 = document.querySelector(".menu3");
-const mega4 = document.querySelector(".menu4");
+const mega = document.getElementsByClassName("drop");
 
 const slideNum = document.querySelector(".slide_number");
 const slideItems = document.getElementsByClassName("slider_item");
@@ -67,35 +64,35 @@ prevBtn.addEventListener("click", prevSlides);
 setInterval(nextSlides, 5000);
 
 btn1.addEventListener("mouseover", () => {
-  mega1.style.display = "flex";
+  mega[0].style.display = "block";
 });
 
 btn1.addEventListener("mouseout", () => {
-  mega1.style.display = "none";
+  mega[0].style.display = "none";
 });
 
 btn2.addEventListener("mouseover", () => {
-  mega2.style.display = "flex";
+  mega[1].style.display = "flex";
 });
 
 btn2.addEventListener("mouseout", () => {
-  mega2.style.display = "none";
+  mega[1].style.display = "none";
 });
 
 btn3.addEventListener("mouseover", () => {
-  mega3.style.display = "flex";
+  mega[2].style.display = "flex";
 });
 
 btn3.addEventListener("mouseout", () => {
-  mega3.style.display = "none";
+  mega[2].style.display = "none";
 });
 
 btn4.addEventListener("mouseover", () => {
-  mega4.style.display = "flex";
+  mega[3].style.display = "flex";
 });
 
 btn4.addEventListener("mouseout", () => {
-  mega4.style.display = "none";
+  mega[3].style.display = "none";
 });
 
 navColor.addEventListener("mouseover", () => {
