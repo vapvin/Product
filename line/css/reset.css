@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /*여백 초기화*/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Nanum Gothic", "Roboto", sans-serif;
 }

@@ -1,1 +1,142 @@
 @import url(reset.css);
+
+header,
+section,
+footer {
+  width: 100%;
+}
+
+header {
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  height: 0;
+  position: relative;
+}
+
+.hd {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1180px;
+  height: 80px;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav_link {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav_link a {
+  font-family: "Roboto";
+  font-weight: 200;
+  font-size: 16px;
+  color: #fff;
+  margin: 0 25px;
+  padding: 5px 0;
+}
+
+.logo a {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 32px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 30px;
+}
+
+.drop_btn a {
+  padding: 5px 0;
+  color: white;
+}
+
+.header_slidebox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #444;
+}
+
+.slide_itmes {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+button.next,
+button.prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  background: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 200;
+  outline: none;
+  border: none;
+  z-index: 9999;
+  padding: 20px;
+  cursor: pointer;
+}
+
+button.next {
+  right: 5%;
+}
+
+button.prev {
+  left: 5%;
+}
+
+.overay {
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background: url("../img/opacity.png") repeat;
+}
+
+.overay h2 {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 5.5rem;
+}
+
+.overay p {
+  font-size: 1.4rem;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.showing {
+  z-index: 88;
+  opacity: 1;
+}
