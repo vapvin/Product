@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="wrap">
-      <header>
+      <header id="header">
         <nav>
           <div class="hd">
             <div class="nav_link">
@@ -31,11 +31,11 @@
                 </a>
               </h1>
 
-              <a href="">ABOUT</a>
-              <a href="">CORE BUSINESS</a>
-              <a href="">GALLERY</a>
-              <a href="">MEDIA</a>
-              <a href="">NOTICE</a>
+              <a class="after_effec after_block" href="#about">ABOUT</a>
+              <a class="after_effec" href="#core">CORE BUSINESS</a>
+              <a class="after_effec" href="#gallery">GALLERY</a>
+              <a class="after_effec" href="#media">MEDIA</a>
+              <a class="after_effec" href="#notice">NOTICE</a>
               <a href="">SHOP ONLINE</a>
             </div>
 
@@ -60,12 +60,107 @@
 
         <button class="next">></button>
         <button class="prev"><</button>
+
+        <div class="dot_con">
+          <span class="dot" onclick="thisSlide(0)"></span>
+          <span class="dot" onclick="thisSlide(1)"></span>
+          <span class="dot" onclick="thisSlide(2)"></span>
+          <span class="dot" onclick="thisSlide(3)"></span>
+          <span class="dot" onclick="thisSlide(4)"></span>
+          <span class="dot" onclick="thisSlide(5)"></span>
+        </div>
       </header>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
+      <section class="about" id="about">
+        <h2>ABOUT<br />LINE FRIENDS</h2>
+        <p>
+          라인프렌즈는 2011년, 모바일 메신저 ‘라인’ 의 스티커 캐릭터로
+          탄생했습니다. 오리지널 캐릭터 ‘브라운앤프렌즈’ 에 이어 글로벌 인기
+          아티스트 방탄소년단과 함께 만든 ‘BT21’, 중국의 아이돌 스타 왕위엔과
+          협업한 ‘ROY6’ 등 새로운 캐릭터 IP들이 밀레니얼 세대의 큰 사랑을
+          받으며, 다양한 IP를 보유한 글로벌 크리에이티브 스튜디오로 도약하고
+          있습니다.
+        </p>
+        <div class="thumb">
+          <a class="openModal">
+            <img src="img/img_about_thumb.jpg" alt="" />
+          </a>
+        </div>
+
+        <div class="modal_overlay">
+          <div class="modal_content">
+            <button class="modal_close">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal_video">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/YdGtxXYIFQc"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="core" id="core">
+        <h2
+          style="width: 100%; font-size:80px; color:#404040; text-align:center; padding: 110px 0 20px; margin-bottom:50px;"
+        >
+          CORE BUSNIESS
+        </h2>
+        <div class="center_content">
+          <div class="img_cont">
+            <div class="logo_img_box">
+              <img src="img/img_sec_icon4.gif" alt="" />
+            </div>
+            <dl>
+              <dt>RETAIL</dt>
+              <dd>
+                다양한 캐릭터 제품을 자체 제작하여 전 세계 주요 도시의
+                온/오프라인 스토어에서 판매하고 매장을 통해 도심 속 활력의
+                경험을 제공합니다.
+              </dd>
+            </dl>
+          </div>
+          <div class="img_cont">
+            <div class="logo_img_box">
+              <img src="img/img_sec_icon5.gif" alt="" />
+            </div>
+            <dl>
+              <dt>PARTNERSHIP</dt>
+              <dd>
+                다양한 글로벌 파트너들과의 전략적 제휴를 통해 콜라보레이션,
+                라이센싱 제품을 만들고 서로의 철학과 가치를 나눕니다.​
+              </dd>
+            </dl>
+          </div>
+          <div class="img_cont">
+            <div class="logo_img_box">
+              <img src="img/img_sec_icon6.gif" alt="" />
+            </div>
+            <dl>
+              <dt>CONTENTS</dt>
+              <dd>
+                애니메이션, 게임 콘텐츠를 내부 스튜디오에서 자체 제작하는 동시에
+                IT 노하우와 기술을 더하여 AI,IoT 등으로 사업을 확장하고
+                있습니다.
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="btn_content">
+          <a href="">
+            <span>제휴 제안</span>
+          </a>
+        </div>
+      </section>
+      <section class="gallery" id="gallery"></section>
+      <section class="media" id="media"></section>
+      <section class="notice" id="notice"></section>
+      <section class="section5"></section>
       <footer></footer>
     </div>
 
