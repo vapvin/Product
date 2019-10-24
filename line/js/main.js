@@ -6,6 +6,8 @@ const SHOWING_CLASS = "showing";
 const DOTS_CLASS = "bging";
 const MODAL_CLASS = "modal_open";
 const FIXED_CLASS = "fix";
+const GALLERY_CLASS = "show_gallery";
+const TAB_CLASS = "select_tab";
 
 //Slide
 
@@ -29,6 +31,26 @@ const closeBtn = document.querySelector(".modal_close");
 //Fixed Nav
 
 const nav = document.querySelector("nav");
+
+// Gellery Slides Selector
+
+const firstGalleryItems = document.querySelector(
+  ".gallery_box_items:first-child"
+);
+const lastGalleryItems = document.querySelector(
+  ".gallery_box_items:last-child"
+);
+const galleryItems = document.querySelectorAll(".gallery_box_items");
+const galleryNext = document.querySelector(".gallery_next");
+const galleryPrev = document.querySelector(".gallery_prev");
+
+const firstTabItems = document.querySelector(".tab_items:first-child");
+const lastTabItems = document.querySelector(".tab_items:last-child");
+const tabNext = document.querySelector(".gallery_tab_next");
+const tabPrev = document.querySelector(".gallery_tab_prev");
+const currentTab = document.querySelector(`.${TAB_CLASS}`);
+const tabs = document.querySelectorAll(".tab_items");
+const tabImg = document.querySelector(".tab_img");
 
 //Function
 
@@ -137,9 +159,125 @@ const onScroll = event => {
   }
 };
 
+// Gallery Slides
+
+const boxSlideNext = () => {
+  const currentGallery = document.querySelector(`.${GALLERY_CLASS}`);
+  const currentTab = document.querySelector(`.${TAB_CLASS}`);
+  if (currentGallery) {
+    currentGallery.classList.remove(GALLERY_CLASS);
+    currentTab.classList.remove(TAB_CLASS);
+    const nextGallery = currentGallery.nextElementSibling;
+    const nextTab = currentTab.nextElementSibling;
+
+    if (nextGallery) {
+      nextGallery.classList.add(GALLERY_CLASS);
+      nextTab.classList.add(TAB_CLASS);
+    } else {
+      firstGalleryItems.classList.add(GALLERY_CLASS);
+      firstTabItems.classList.add(TAB_CLASS);
+    }
+  } else {
+    firstGalleryItems.classList.add(GALLERY_CLASS);
+    firstTabItems.classList.add(TAB_CLASS);
+  }
+
+  if (tabs[0].classList.contains(TAB_CLASS)) {
+    tabImg.style.left = "0px";
+  }
+
+  if (currentTab == tabs[4]) {
+    tabImg.style.left = "-100%";
+  }
+};
+
+const boxSlidePrev = () => {
+  const currentGallery = document.querySelector(`.${GALLERY_CLASS}`);
+  const currentTab = document.querySelector(`.${TAB_CLASS}`);
+
+  if (currentGallery) {
+    currentGallery.classList.remove(GALLERY_CLASS);
+    currentTab.classList.remove(TAB_CLASS);
+
+    const prevGallery = currentGallery.previousElementSibling;
+    const prevTab = currentTab.previousElementSibling;
+
+    if (prevGallery) {
+      prevGallery.classList.add(GALLERY_CLASS);
+      prevTab.classList.add(TAB_CLASS);
+    } else {
+      lastGalleryItems.classList.add(GALLERY_CLASS);
+      lastTabItems.classList.add(TAB_CLASS);
+    }
+  } else {
+    lastGalleryItems.classList.add(GALLERY_CLASS);
+    lastTabItems.classList.add(TAB_CLASS);
+  }
+
+  if (tabs[9].classList.contains(TAB_CLASS)) {
+    tabImg.style.left = "-100%";
+  }
+
+  if (currentTab == tabs[5]) {
+    tabImg.style.left = "0";
+  }
+};
+
+const thisGallery = o => {
+  const currentGallery = document.querySelector(`.${GALLERY_CLASS}`);
+  const currentTab = document.querySelector(`.${TAB_CLASS}`);
+
+  if (currentGallery) {
+    currentGallery.classList.remove(GALLERY_CLASS);
+    currentTab.classList.remove(TAB_CLASS);
+  }
+
+  galleryItems[o].classList.add(GALLERY_CLASS);
+  tabs[o].classList.add(TAB_CLASS);
+};
+
+const tabBtn = () => {
+  const currentGallery = document.querySelector(`.${GALLERY_CLASS}`);
+  const currentTab = document.querySelector(`.${TAB_CLASS}`);
+
+  if (
+    currentTab == tabs[0] ||
+    currentTab == tabs[1] ||
+    currentTab == tabs[2] ||
+    currentTab == tabs[3] ||
+    currentTab == tabs[4]
+  ) {
+    tabs[5].classList.add(TAB_CLASS);
+    galleryItems[5].classList.add(GALLERY_CLASS);
+  }
+
+  currentGallery.classList.remove(GALLERY_CLASS);
+  currentTab.classList.remove(TAB_CLASS);
+
+  if (
+    currentTab == tabs[5] ||
+    currentTab == tabs[6] ||
+    currentTab == tabs[7] ||
+    currentTab == tabs[8] ||
+    currentTab == tabs[9]
+  ) {
+    tabs[0].classList.add(TAB_CLASS);
+    galleryItems[0].classList.add(GALLERY_CLASS);
+  }
+
+  if (tabs[0].classList.contains(TAB_CLASS)) {
+    tabImg.style.left = "0px";
+  }
+
+  if (tabs[5].classList.contains(TAB_CLASS)) {
+    tabImg.style.left = "-100%";
+  }
+};
+
 // 함수실행
 
 nextSlides();
+boxSlideNext();
 
 next.addEventListener("click", nextSlides);
 prev.addEventListener("click", prevSlides);
@@ -150,3 +288,9 @@ closeBtn.addEventListener("click", closeModal);
 window.addEventListener("scroll", fixed);
 
 window.document.addEventListener("scroll", onScroll);
+
+galleryNext.addEventListener("click", boxSlideNext);
+galleryPrev.addEventListener("click", boxSlidePrev);
+
+tabNext.addEventListener("click", tabBtn);
+tabPrev.addEventListener("click", tabBtn);
