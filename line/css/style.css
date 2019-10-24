@@ -435,14 +435,169 @@ button.prev {
 
 .media {
   height: 1420px;
+  background: #f7f7f7;
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0;
+  font-family: "Roboto";
+}
+
+.page_img_wrap {
+  width: 100%;
+  height: 1020px;
+}
+
+.page_link {
+  display: block;
+  width: 100%;
+  height: 330px;
+  margin-bottom: 20px;
+}
+
+.page_link:hover {
+  color: black;
+}
+
+.content_page {
+  width: 1020px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.page_img {
+  width: 640px;
+  height: 100%;
+  float: left;
+}
+
+.page_content {
+  width: 380px;
+  height: 100%;
+  float: left;
+  padding: 46px 40px 36px;
+}
+
+.page_content dt {
+  width: 100%;
+  height: 48px;
+  font-size: 17px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #333;
+}
+.page_content dd:first-child {
+  width: 100%;
+  height: 88px;
+  font-size: 12px;
+  color: #666;
+}
+
+.page_content dd:last-child {
+  margin-top: 95px;
+  color: #999;
+  font-size: 14px;
+}
+
+.pagenations {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.reiv {
+  widows: 20%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reiv span {
+  display: inline-block;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.pagesnext,
+.pagesprev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pagesnext {
+  left: 100%;
+}
+
+.pagesprev {
+  right: 100%;
 }
 
 .notice {
-  height: 560px;
+  height: 720px;
+  padding: 100px 0 120px;
+}
+
+.table_cont {
+  width: 1020px;
+  height: 300px;
+  margin: auto;
+}
+
+.table {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+
+.table thead {
+  width: 100%;
+  height: 52px;
+}
+
+.table thead tr {
+  width: 100%;
+  height: 100%;
+}
+
+.table td {
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+  vertical-align: middle;
+  padding: 30px 0 31px;
+  font-size: 14px;
+}
+
+.table td:nth-child(3) {
+  text-align: left;
+  font-weight: 600;
+}
+
+.table thead tr th {
+  text-align: center;
+  font-size: 12px;
+  color: #808080;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.table_nation {
+  width: 1020px;
+  height: 26px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.table_nation span {
+  display: inline-block;
+  padding: 10px;
 }
 
 .section5 {
   height: 650px;
+  padding: 50px 0 120px;
 }
 
 .center_content {
@@ -496,4 +651,138 @@ button.prev {
   display: inline-block;
   height: 100%;
   line-height: 60px;
+}
+
+.content5 {
+  width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_item {
+  width: 33.3%;
+  height: 100%;
+  margin: 0 20px 0 0;
+}
+
+.content_item:last-child {
+  width: 33.4%;
+}
+
+.img_itemes {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 28px;
+}
+
+.img_itemes img {
+  width: 100%;
+  height: 100%;
+}
+
+.content_text {
+  width: 100%;
+  height: 145px;
+  margin-bottom: 22px;
+}
+
+.content_text strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.content_text p {
+  padding-right: 20px;
+  font-size: 13px;
+  color: #666;
+  line-height: 24px;
+}
+
+.content_link {
+  width: 100%;
+  height: 20px;
+}
+
+.content_link a {
+  padding-right: 15px;
+  font-size: 14px;
+  color: #999;
+  font-weight: 600;
+}
+
+.content_link a:nth-child(2) {
+  margin-left: 18px;
+}
+
+footer {
+  width: 100%;
+  height: 270px;
+  background: #383838;
+}
+
+.cont {
+  width: 1180px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 60px 0 0;
+}
+
+.footer_logo {
+  width: 20%;
+  height: 20px;
+  float: left;
+}
+
+.footer_logo h2 {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+}
+
+.footer_center {
+  width: 50%;
+  height: 120px;
+  float: left;
+}
+
+.footer_center p {
+  margin-bottom: 20px;
+}
+
+.footer_center p:first-child {
+  color: #eee;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.footer_center p:first-child a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.1rem;
+}
+
+.footer_center p:nth-child(2) {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 24px;
+}
+
+.footer_center p:last-child {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer_icon {
+  font-size: 1.3rem;
+}
+
+.footer_icon a {
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  margin-left: 25px;
 }

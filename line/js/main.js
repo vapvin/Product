@@ -52,6 +52,30 @@ const currentTab = document.querySelector(`.${TAB_CLASS}`);
 const tabs = document.querySelectorAll(".tab_items");
 const tabImg = document.querySelector(".tab_img");
 
+// Pagenations
+
+// const pageImgBox = document.querySelectorAll(".page_img > img");
+// const pageContent = document.querySelectorAll(".page_content");
+// const pageImgs = [
+//   { img: "img/pages1.jpg" },
+//   { img: "img/pages2.jpg" },
+//   { img: "img/pages3.jpg" },
+//   { img: "img/pages4.jpg" },
+//   { img: "img/pages5.jpg" },
+//   { img: "img/pages6.jpg" },
+//   { img: "img/pages7.jpg" },
+//   { img: "img/pages8.jpg" },
+//   { img: "img/pages9.jpg" },
+//   { img: "img/pages10.jpg" },
+//   { img: "img/pages11.jpg" },
+//   { img: "img/pages12.jpg" },
+//   { img: "img/pages13.jpg" },
+//   { img: "img/pages14.jpg" },
+//   { img: "img/pages15.jpg" }
+// ];
+
+// const links = document.querySelectorAll(".links_a");
+
 //Function
 
 //slides
