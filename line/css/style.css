@@ -470,6 +470,11 @@ button.prev {
   float: left;
 }
 
+.page_img img {
+  width: 100%;
+  height: 100%;
+}
+
 .page_content {
   width: 380px;
   height: 100%;
@@ -507,7 +512,7 @@ button.prev {
 }
 
 .reiv {
-  widows: 20%;
+  width: 20%;
   height: 100%;
   margin: 0 auto;
   position: relative;
