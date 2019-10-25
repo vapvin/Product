@@ -916,6 +916,60 @@ footer {
 }
 
 @media (max-width: 480px) {
+  header {
+    height: 500px;
+  }
+
+  .overay {
+    height: 500px;
+  }
+
+  .overay p {
+    font-size: 1rem;
+  }
+
+  .overay h2 {
+    font-size: 1.5rem;
+  }
+  button.next,
+  button.prev {
+    top: 40%;
+  }
+  .hd {
+    height: auto;
+  }
+
+  .fix {
+    background: #fff;
+    height: 180px;
+  }
+  .nav_link {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .nav_link a {
+    display: block;
+  }
+
+  .logo a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .about {
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .about p {
+    width: 100%;
+  }
+
+  .thumb {
+    display: none;
+  }
   .center_content {
     display: block;
     height: auto;
@@ -926,5 +980,43 @@ footer {
   }
   .footer_icon {
     padding: 60px 0 0;
+  }
+
+  .gallery {
+    height: 500px;
+  }
+
+  .pagenations {
+    width: 100%;
+  }
+
+  .notice {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page_link {
+    height: auto;
+    padding: 20px;
+  }
+
+  .reiv {
+    width: 100%;
+    text-align: center;
+  }
+
+  th:last-child {
+    display: none;
+  }
+  td:last-child {
+    display: none;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .content_item {
+    padding: 20px;
   }
 }
