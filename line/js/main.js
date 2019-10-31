@@ -164,7 +164,7 @@ const onScroll = event => {
     document.documentElement.scrollTop ||
     document.body.scrollTop;
 
-  for (var i = 0; i < sections.length; i++) {
+  for (let i = 0; i < sections.length; i++) {
     const currLink = sections[i];
     const val = currLink.getAttribute("href");
     const refElement = document.querySelector(val);
