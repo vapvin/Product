@@ -76,6 +76,10 @@ const tabImg = document.querySelector(".tab_img");
 
 // const links = document.querySelectorAll(".links_a");
 
+// Responsiv Header Nav
+
+const resBtn = document.querySelector(".responsive_nav_btn");
+
 //Function
 
 //slides
@@ -149,6 +153,19 @@ const closeModal = () => {
 
 const fixed = () => {
   if (document.documentElement.scrollTop > 20) {
+    nav.classList.add(FIXED_CLASS);
+  } else if (
+    document.documentElement.offsetWidth < 480 &&
+    document.documentElement.scrollTop < 20
+  ) {
+    nav.classList.add(FIXED_CLASS);
+  } else {
+    nav.classList.remove(FIXED_CLASS);
+  }
+};
+
+const resFixed = () => {
+  if (document.documentElement.offsetWidth < 480) {
     nav.classList.add(FIXED_CLASS);
   } else {
     nav.classList.remove(FIXED_CLASS);
@@ -298,6 +315,18 @@ const tabBtn = () => {
   }
 };
 
+const resNavOpen = () => {
+  if (resBtn.innerHTML === "X") {
+    resBtn.innerHTML = "|||";
+    resBtn.style.transform = "rotate(90deg)";
+    nav.style.height = "70px";
+  } else {
+    resBtn.innerHTML = "X";
+    resBtn.style.transform = "rotate(0deg)";
+    nav.style.height = "220px";
+  }
+};
+
 // 함수실행
 
 nextSlides();
@@ -310,6 +339,8 @@ openBtn.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
 
 window.addEventListener("scroll", fixed);
+window.addEventListener("resize", resFixed);
+window.addEventListener("load", resFixed);
 
 window.document.addEventListener("scroll", onScroll);
 
@@ -318,3 +349,5 @@ galleryPrev.addEventListener("click", boxSlidePrev);
 
 tabNext.addEventListener("click", tabBtn);
 tabPrev.addEventListener("click", tabBtn);
+
+resBtn.addEventListener("click", resNavOpen);
