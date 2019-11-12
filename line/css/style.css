@@ -507,12 +507,14 @@ button.prev {
 
 .page_content dt {
   width: 100%;
-  height: 48px;
+  height: auto;
   font-size: 17px;
   margin-bottom: 12px;
   font-weight: 600;
   color: #333;
+
 }
+
 .page_content dd:first-child {
   width: 100%;
   height: 88px;
@@ -531,7 +533,7 @@ button.prev {
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 50px auto 0;
 }
 
 .reiv {
@@ -552,6 +554,7 @@ button.prev {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  margin-left: -30px;
 }
 
 .pagesnext {
@@ -646,7 +649,7 @@ button.prev {
   height: 100%;
 }
 
-.img_cont > dl dt {
+.img_cont>dl dt {
   width: 100%;
   text-align: center;
   font-weight: 600;
@@ -654,7 +657,7 @@ button.prev {
   font-size: 18px;
 }
 
-.img_cont > dl dd {
+.img_cont>dl dd {
   overflow: hidden;
   font-size: 13px;
   height: 120px;
@@ -824,6 +827,7 @@ footer {
 }
 
 @media (max-width: 960px) {
+
   .hd,
   .fix {
     width: 100%;
@@ -845,6 +849,7 @@ footer {
   .core {
     height: auto;
   }
+
   .media {
     height: auto;
   }
@@ -902,9 +907,11 @@ footer {
     height: auto;
     display: block;
   }
+
   .content_item {
     width: 100%;
   }
+
   .img_itemes,
   .content_text,
   .content_link {
@@ -962,10 +969,12 @@ footer {
   .overay h2 {
     font-size: 1.5rem;
   }
+
   button.next,
   button.prev {
     top: 40%;
   }
+
   .hd {
     height: auto;
     overflow: hidden;
@@ -982,6 +991,7 @@ footer {
     display: block;
     z-index: 99999;
   }
+
   .nav_link {
     display: block;
     width: 100%;
@@ -1015,14 +1025,17 @@ footer {
   .thumb {
     display: none;
   }
+
   .center_content {
     display: block;
     height: auto;
   }
+
   .img_cont {
     width: 100%;
     text-align: center;
   }
+
   .footer_icon {
     padding: 60px 0 0;
   }
@@ -1053,6 +1066,7 @@ footer {
   th:last-child {
     display: none;
   }
+
   td:last-child {
     display: none;
   }
