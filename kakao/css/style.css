@@ -62,22 +62,32 @@ nav h1 {
   font-size: 1.5rem;
 }
 
-nav > ul {
+nav>ul {
   height: 100%;
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-block;
   height: 100%;
   margin: 0 15px;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.white h1 {
+  color: white;
+}
+
+.white li a {
+  color: white;
+}
+
+
 
 nav p button {
   background: none;
@@ -175,13 +185,19 @@ nav p button:focus {
 }
 
 .img_con button {
-  width: 110px;
-  height: 35px;
+  width: 150px;
+  height: 50px;
   background: #fff;
   color: black;
   border: none;
   outline: none;
+  font-weight: 600;
   margin-top: 50px;
+}
+
+.img_con button:hover {
+  background: black;
+  color: white;
 }
 
 .megamenu {
@@ -199,36 +215,41 @@ nav p button:focus {
   border-right: none;
 }
 
-.megamenu > ul:first-child {
+.megamenu>ul:first-child {
   border-left: 1px solid #ddd;
 }
 
-.megamenu > ul {
+.megamenu>ul {
   display: block;
   height: 100%;
   padding: 20px 45px;
   border-right: 1px solid #ddd;
 }
 
-.megamenu > ul > li:first-child {
+.megamenu>ul>li:first-child {
   margin-bottom: 25px;
   font-weight: 600;
   font-size: 16px;
   color: black;
 }
 
-.megamenu > ul > li {
+.megamenu>ul>li {
   text-align: center;
   margin-bottom: 15px;
   font-size: 12px;
   color: #777;
+  cursor: pointer;
 }
 
-.menu3 > ul > li:first-child {
+.megamenu>ul>li:hover {
+  color: #000;
+}
+
+.menu3>ul>li:first-child {
   font-size: 12px;
 }
 
-.menu3 > ul > li {
+.menu3>ul>li {
   font-size: 8px;
 }
 

@@ -38,11 +38,13 @@ figcaption {
 a {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
 }
 
-a:hover {
-  color: #eee;
+button {
+  cursor: pointer;
 }
+
 
 /*폰트 초기화*/
 
