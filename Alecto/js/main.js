@@ -69,3 +69,17 @@ function prevSlides() {
 nextSlides();
 nextBtn.addEventListener("click", nextSlides);
 prevBtn.addEventListener("click", prevSlides);
+
+const nav = document.querySelector("nav");
+
+const fixFunction = () => {
+  if (document.documentElement.scrollTop > 20) {
+    nav.style.background = "rgba(0,0,0,0.7)";
+  } else {
+    nav.style.background = "none";
+  }
+}
+
+window.onscroll = function () {
+  fixFunction();
+}

@@ -47,6 +47,7 @@ nav {
   height: 100px;
   padding: 50px 100px 20px;
   z-index: 9999;
+  transition: 0.3s;
 }
 
 .logo {
@@ -178,7 +179,6 @@ main {
   height: 1px;
   background: #17daa3;
   margin-bottom: 40px;
-
 }
 
 .about_text p {
@@ -220,7 +220,6 @@ main {
   color: #fff;
 }
 
-
 .items h3 {
   font-size: 1.7rem;
   margin: 20px 0;
@@ -256,28 +255,67 @@ main {
   letter-spacing: 1px;
 }
 
-
 .text_box {
   width: 100%;
   height: 1400px;
-
 }
 
 .text_box_items {
   width: 100%;
   height: 700px;
   background: #fff;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 260px;
 }
 
 .text_box_items:first-child {
   background: #f9f9fa;
+  align-items: flex-end;
+}
+
+.text_box_items:nth-child(2) {
+  align-items: flex-start;
+}
+
+.box_container {
+  text-align: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 60px 30px;
+}
+
+.box_container h4 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.box_container p {
+  line-height: 30px;
+  color: #87949e;
+}
+
+.box_container button {
+  width: 180px;
+  height: 45px;
+  border: none;
+  background: #17daa3;
+  color: white;
+  outline: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .slide_sec {
   width: 100%;
   height: 700px;
-
 }
 
 .services {
